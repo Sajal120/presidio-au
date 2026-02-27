@@ -12,7 +12,12 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
 COPY ./pyproject.toml /app/
-RUN pip install poetry==2.3.2 \
+
+# Bypass SSL certificate verification for corporate proxies
+ENV PIP_TRUSTED_HOST="pypi.org files.pythonhosted.org pypi.python.org"
+ENV POETRY_REQUESTS_TIMEOUT=30
+
+RUN pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org poetry==2.3.2 \
     && poetry install --no-root --only=main -E server \
     && rm -rf $(poetry config cache-dir)
 

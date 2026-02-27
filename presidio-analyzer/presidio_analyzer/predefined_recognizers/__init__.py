@@ -10,75 +10,6 @@ from .country_specific.australia.au_acn_recognizer import AuAcnRecognizer
 from .country_specific.australia.au_medicare_recognizer import AuMedicareRecognizer
 from .country_specific.australia.au_tfn_recognizer import AuTfnRecognizer
 
-# Finland recognizers
-from .country_specific.finland.fi_personal_identity_code_recognizer import (
-    FiPersonalIdentityCodeRecognizer,
-)
-from .country_specific.india import (
-    InVehicleRegistrationRecognizer,
-)
-
-# India recognizers
-from .country_specific.india.in_aadhaar_recognizer import InAadhaarRecognizer
-from .country_specific.india.in_gstin_recognizer import InGstinRecognizer
-from .country_specific.india.in_pan_recognizer import InPanRecognizer
-from .country_specific.india.in_passport_recognizer import InPassportRecognizer
-from .country_specific.india.in_voter_recognizer import InVoterRecognizer
-
-# Italy recognizers
-from .country_specific.italy.it_driver_license_recognizer import (
-    ItDriverLicenseRecognizer,
-)
-from .country_specific.italy.it_fiscal_code_recognizer import ItFiscalCodeRecognizer
-from .country_specific.italy.it_identity_card_recognizer import ItIdentityCardRecognizer
-from .country_specific.italy.it_passport_recognizer import ItPassportRecognizer
-from .country_specific.italy.it_vat_code import ItVatCodeRecognizer
-
-# Korea recognizers
-from .country_specific.korea.kr_brn_recognizer import KrBrnRecognizer
-from .country_specific.korea.kr_driver_license_recognizer import (
-    KrDriverLicenseRecognizer,
-)
-from .country_specific.korea.kr_frn_recognizer import KrFrnRecognizer
-from .country_specific.korea.kr_passport_recognizer import KrPassportRecognizer
-from .country_specific.korea.kr_rrn_recognizer import KrRrnRecognizer
-
-# Nigeria recognizers
-from .country_specific.nigeria.ng_nin_recognizer import NgNinRecognizer
-from .country_specific.nigeria.ng_vehicle_registration_recognizer import (
-    NgVehicleRegistrationRecognizer,
-)
-
-# Poland recognizers
-from .country_specific.poland.pl_pesel_recognizer import PlPeselRecognizer
-
-# Singapore recognizers
-from .country_specific.singapore.sg_fin_recognizer import SgFinRecognizer
-from .country_specific.singapore.sg_uen_recognizer import SgUenRecognizer
-
-# Spain recognizers
-from .country_specific.spain.es_nie_recognizer import EsNieRecognizer
-from .country_specific.spain.es_nif_recognizer import EsNifRecognizer
-
-# Thai recognizers
-from .country_specific.thai.th_tnin_recognizer import ThTninRecognizer
-
-# UK recognizers
-from .country_specific.uk.uk_nhs_recognizer import NhsRecognizer
-from .country_specific.uk.uk_nino_recognizer import UkNinoRecognizer
-from .country_specific.uk.uk_postcode_recognizer import UkPostcodeRecognizer
-
-# US recognizers
-from .country_specific.us.aba_routing_recognizer import AbaRoutingRecognizer
-from .country_specific.us.medical_license_recognizer import MedicalLicenseRecognizer
-from .country_specific.us.us_bank_recognizer import UsBankRecognizer
-from .country_specific.us.us_driver_license_recognizer import UsLicenseRecognizer
-from .country_specific.us.us_itin_recognizer import UsItinRecognizer
-from .country_specific.us.us_mbi_recognizer import UsMbiRecognizer
-from .country_specific.us.us_npi_recognizer import UsNpiRecognizer
-from .country_specific.us.us_passport_recognizer import UsPassportRecognizer
-from .country_specific.us.us_ssn_recognizer import UsSsnRecognizer
-
 # Generic recognizers
 from .generic.credit_card_recognizer import CreditCardRecognizer
 from .generic.crypto_recognizer import CryptoRecognizer
@@ -116,7 +47,6 @@ PREDEFINED_RECOGNIZERS = [
     "EmailRecognizer",
     "IpRecognizer",
     "IbanRecognizer",
-    "MedicalLicenseRecognizer",
     "UrlRecognizer",
 ]
 
@@ -127,27 +57,15 @@ NLP_RECOGNIZERS = {
 }
 
 __all__ = [
-    "AbaRoutingRecognizer",
     "CreditCardRecognizer",
     "CryptoRecognizer",
     "DateRecognizer",
     "EmailRecognizer",
     "IbanRecognizer",
     "IpRecognizer",
-    "NhsRecognizer",
-    "MedicalLicenseRecognizer",
     "MacAddressRecognizer",
     "PhoneRecognizer",
-    "SgFinRecognizer",
     "UrlRecognizer",
-    "UsBankRecognizer",
-    "UsItinRecognizer",
-    "UsLicenseRecognizer",
-    "UsMbiRecognizer",
-    "UsNpiRecognizer",
-    "UsPassportRecognizer",
-    "UsSsnRecognizer",
-    "EsNifRecognizer",
     "SpacyRecognizer",
     "StanzaRecognizer",
     "NLP_RECOGNIZERS",
@@ -156,37 +74,12 @@ __all__ = [
     "AuTfnRecognizer",
     "AuMedicareRecognizer",
     "TransformersRecognizer",
-    "ItDriverLicenseRecognizer",
-    "ItFiscalCodeRecognizer",
-    "ItVatCodeRecognizer",
-    "ItIdentityCardRecognizer",
-    "ItPassportRecognizer",
-    "InPanRecognizer",
     "GLiNERRecognizer",
     "HuggingFaceNerRecognizer",
-    "PlPeselRecognizer",
     "AzureAILanguageRecognizer",
-    "InAadhaarRecognizer",
-    "InGstinRecognizer",
-    "InVehicleRegistrationRecognizer",
-    "SgUenRecognizer",
-    "InVoterRecognizer",
-    "InPassportRecognizer",
-    "FiPersonalIdentityCodeRecognizer",
-    "EsNieRecognizer",
-    "UkNinoRecognizer",
-    "UkPostcodeRecognizer",
     "AzureHealthDeidRecognizer",
-    "KrBrnRecognizer",
-    "KrRrnRecognizer",
-    "KrDriverLicenseRecognizer",
-    "KrFrnRecognizer",
-    "ThTninRecognizer",
     "LangExtractRecognizer",
     "AzureOpenAILangExtractRecognizer",
     "BasicLangExtractRecognizer",
-    "KrPassportRecognizer",
-    "NgNinRecognizer",
-    "NgVehicleRegistrationRecognizer",
     "MedicalNERRecognizer",
 ]

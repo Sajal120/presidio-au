@@ -26,10 +26,14 @@ RUN apt-get update \
 
 COPY ./pyproject.toml /app/
 
-RUN pip install poetry==2.3.2 \
-    && poetry install --no-root --only=main -E server \
-    && rm -rf $(poetry config cache-dir)
-    
+# Bypass SSL certificate verification for corporate proxies
+ENV PIP_TRUSTED_HOST="pypi.org files.pythonhosted.org pypi.python.org"
+ENV POETRY_REQUESTS_TIMEOUT=30
+
+RUN pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org poetry==2.3.2 \
+  && poetry install --no-root --only=main -E server \
+  && rm -rf $(poetry config cache-dir)
+
 # install nlp models specified in NLP_CONF_FILE
 COPY ./install_nlp_models.py /app/
 
@@ -44,5 +48,5 @@ USER 1001
 
 EXPOSE ${PORT}
 HEALTHCHECK --interval=30s --timeout=3s --start-period=30s --retries=3 \
-    CMD curl -f http://localhost:${PORT}/health || exit 1
+  CMD curl -f http://localhost:${PORT}/health || exit 1
 CMD ["./entrypoint.sh"]

@@ -14,22 +14,18 @@ services:
       retries: 30        # ~5 minutes total
       start_period: 60s  
   presidio-anonymizer:
-    image: ${REGISTRY_NAME}/${IMAGE_PREFIX}presidio-anonymizer${TAG}
+    image: presidio-anonymizer:latest
     build:
       context: ./presidio-anonymizer
-      cache_from:
-        - type=registry,ref=${REGISTRY_NAME}/${IMAGE_PREFIX}presidio-anonymizer:latest
     environment:
       - PORT=5001
     ports:
       - "5001:5001"
 
   presidio-analyzer:
-    image: ${REGISTRY_NAME}/${IMAGE_PREFIX}presidio-analyzer${TAG}
+    image: presidio-analyzer:latest
     build:
       context: ./presidio-analyzer
-      cache_from:
-        - type=registry,ref=${REGISTRY_NAME}/${IMAGE_PREFIX}presidio-analyzer:latest
     environment:
       - PORT=5001
       - OLLAMA_HOST=http://ollama:11434
@@ -40,11 +36,9 @@ services:
         condition: service_healthy
 
   presidio-image-redactor:
-    image: ${REGISTRY_NAME}/${IMAGE_PREFIX}presidio-image-redactor${TAG}
+    image: presidio-image-redactor:latest
     build:
       context: ./presidio-image-redactor
-      cache_from:
-        - type=registry,ref=${REGISTRY_NAME}/${IMAGE_PREFIX}presidio-image-redactor:latest
     environment:
       - PORT=5001
     ports:
