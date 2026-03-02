@@ -9,6 +9,9 @@ from .country_specific.australia.au_abn_recognizer import AuAbnRecognizer
 from .country_specific.australia.au_acn_recognizer import AuAcnRecognizer
 from .country_specific.australia.au_medicare_recognizer import AuMedicareRecognizer
 from .country_specific.australia.au_tfn_recognizer import AuTfnRecognizer
+from .country_specific.australia.au_bsb_recognizer import AuBsbRecognizer
+from .country_specific.australia.au_policy_recognizer import AuPolicyRecognizer
+from .country_specific.australia.au_account_recognizer import AuAccountRecognizer
 
 # Generic recognizers
 from .generic.credit_card_recognizer import CreditCardRecognizer
@@ -73,6 +76,9 @@ __all__ = [
     "AuAcnRecognizer",
     "AuTfnRecognizer",
     "AuMedicareRecognizer",
+    "AuBsbRecognizer",
+    "AuPolicyRecognizer",
+    "AuAccountRecognizer",
     "TransformersRecognizer",
     "GLiNERRecognizer",
     "HuggingFaceNerRecognizer",

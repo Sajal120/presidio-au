@@ -1,0 +1,127 @@
+{
+  "mailbox_id": "697c0d95970544000e5c29ab",
+  "doc_id": "698a9858729ea9000e2af225",
+  "event": "doc.parsed",
+  "payload": {
+    "filename": "$317.20 AB Comsure.pdf",
+    "template_id": null,
+    "parsed": {
+      "Table 1": [
+        {
+          "Date": "I 09.12.25",
+          "Insured": "COM/FPI/Y5749 YALGANSUNG",
+          "Reference": "1055628 /001",
+          "Policy No": "02U369936BPK",
+          "Premium": "P\n300.00",
+          "Levies": "S\n29.70",
+          "Brokerage": "B\n75.00",
+          "Nett Due": "317.20"
+        },
+        {
+          "Date": "E 19.12.25",
+          "Insured": "Yalgan Sunglasses",
+          "Reference": "I0442845 REN",
+          "Policy No": "",
+          "Premium": "U\n36.36",
+          "Levies": "",
+          "Brokerage": "N̄\n7.50",
+          "Nett Due": ""
+        },
+        {
+          "Date": "",
+          "Insured": "",
+          "Reference": "",
+          "Policy No": "",
+          "Premium": "G\n33.64",
+          "Levies": "",
+          "Brokerage": "",
+          "Nett Due": ""
+        },
+        {
+          "Date": "",
+          "Insured": "INSURER BRANCH TOTALS",
+          "Reference": "",
+          "Policy No": "",
+          "Premium": "P\n300.00",
+          "Levies": "S\n29.70",
+          "Brokerage": "B\n75.00",
+          "Nett Due": "317.20\n:unselected:\n:unselected:"
+        },
+        {
+          "Date": "",
+          "Insured": "For Currency : AUD,",
+          "Reference": "Australian Dollars",
+          "Policy No": "",
+          "Premium": "U\n36.36",
+          "Levies": "",
+          "Brokerage": "N\n7.50",
+          "Nett Due": ""
+        },
+        {
+          "Date": "",
+          "Insured": "",
+          "Reference": "",
+          "Policy No": "",
+          "Premium": "G\n33.64",
+          "Levies": "",
+          "Brokerage": "",
+          "Nett Due": ""
+        },
+        {
+          "Date": "",
+          "Insured": "From Bank Code\n1",
+          "Reference": "317.20",
+          "Policy No": "(FPI)",
+          "Premium": "",
+          "Levies": "",
+          "Brokerage": "",
+          "Nett Due": ""
+        }
+      ],
+      "CustomerAddress": {
+        "_source": "1476, BRISBANE",
+        "houseNumber": "1476",
+        "road": "BRISBANE",
+        "streetAddress": "1476 BRISBANE"
+      },
+      "CustomerTaxId": "99",
+      "InvoiceDate": "2026-02-05",
+      "InvoiceTotal": {
+        "amount": 317.2,
+        "currencyCode": "AUD"
+      },
+      "Items": [
+        {
+          "_source": "I 09.12.25\nCOM/FPI/Y5749 YALGANSUNG\n1055628 /001\n02U369936BPK\nP\n300.00\nS\n29.70\nB\n75.00\n317.20",
+          "Amount": {
+            "amount": 317.2,
+            "currencyCode": "AUD"
+          },
+          "Date": "2025-12-09",
+          "Description": "COM/FPI/Y5749 YALGANSUNG",
+          "ProductCode": "1055628 /001\n02U369936BPK"
+        },
+        {
+          "_source": "E 19.12.25\nYalgan Sunglasses\nI0442845 REN",
+          "Date": "2025-12-19",
+          "Description": "Yalgan Sunglasses",
+          "ProductCode": "I0442845 REN"
+        }
+      ],
+      "VendorAddress": {
+        "_source": "Level 2, 338 Pitt Street\nSYDNEY NSW 2000",
+        "houseNumber": "338",
+        "road": "Pitt Street",
+        "postalCode": "2000",
+        "state": "NSW",
+        "streetAddress": "338 Pitt Street",
+        "suburb": "SYDNEY",
+        "level": "Level 2"
+      },
+      "VendorAddressRecipient": "Express Cover",
+      "VendorName": "Express Cover",
+      "VendorTaxId": "68 127 707 975",
+      "created_at": "2026-02-10T02:30:48.654Z"
+    }
+  }
+}
